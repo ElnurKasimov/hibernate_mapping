@@ -15,8 +15,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 import javax.validation.*;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.Set;
 
 @SpringBootApplication
@@ -52,7 +54,7 @@ public class ToDoListApplication implements CommandLineRunner {
         toDo.setOwner(validUser);
         toDo = toDoRepository.save(toDo);
 
-        LocalDate localDate = toDo.getCreatedAt().toLocalDate();
+        LocalDate localDate = LocalDate.ofInstant(toDo.getCreatedAt(), ZoneId.of("Europe/Kiev"));
         LocalDate today = LocalDate.now();
         System.out.println(localDate.equals(today));
 
