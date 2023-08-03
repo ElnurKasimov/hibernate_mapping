@@ -18,7 +18,7 @@ public class Role {
             strategy = "org.hibernate.id.enhanced.SequenceStyleGenerator",
             parameters = {
                     @Parameter(name = "sequence_name", value = "role_sequence"),
-                    @Parameter(name = "initial_value", value = "10"),
+                    @Parameter(name = "initial_value", value = "100"),
                     @Parameter(name = "increment_size", value = "1")
             }
     )

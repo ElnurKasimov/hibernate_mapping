@@ -33,8 +33,7 @@ public class ToDo {
     )
     private long id;
 
-    @NotNull
-    private Instant createdAt;
+    private Instant createdAt = Instant.now();
 
     @NotBlank (message = "title shouldn't be null, empty or blank")
     @Column(nullable = false, unique = true)

@@ -50,11 +50,9 @@ public class User  {
     private String password;
 
 
-    @NotNull
     @OneToMany (mappedBy = "owner")
     private Set<ToDo> ownerOf;
 
-    @NotNull
     @ManyToMany (mappedBy = "collaborators")
     private Set<ToDo> commonToDos;
 
