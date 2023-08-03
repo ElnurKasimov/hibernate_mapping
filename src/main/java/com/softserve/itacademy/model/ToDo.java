@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -51,7 +52,11 @@ public class ToDo {
             joinColumns = @JoinColumn(name = "todo_id"),
             inverseJoinColumns = @JoinColumn(name = "collaborator_id")
     )
-    private Set<User> collaborators;
+    private Set<User> collaborators = new HashSet<>();
+
+
+    public ToDo() {
+    }
 
     public long getId() {
         return id;

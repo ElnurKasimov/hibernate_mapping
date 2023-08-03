@@ -58,6 +58,9 @@ public class User  {
     @ManyToMany (mappedBy = "collaborators")
     private Set<ToDo> commonToDos;
 
+    public User() {
+    }
+
     public long getId() {
         return id;
     }
