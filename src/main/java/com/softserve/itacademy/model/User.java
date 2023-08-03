@@ -4,10 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
+import javax.validation.constraints.*;
 import java.util.List;
 import java.util.Set;
 
@@ -27,10 +24,18 @@ public class User  {
     )
     private long id;
 
+    @NotBlank
+    @Email (message = "invalid email")
     private String email;
 
+    @NotBlank
+    @Size(min = 2, max = 255, message = "firstName has to be from 2 to 255 symbols")
+    @Pattern(regexp = "^[A-Za-z]+(?:-[A-Za-z]+)*$")
     private String firstName;
 
+    @NotBlank
+    @Size(min = 2, max = 255, message = "lastName has to be from 2 to 255 symbols")
+    @Pattern(regexp = "^[A-Za-z]+(?:-[A-Za-z]+)*$")
     private String lastName;
 
     @ManyToOne

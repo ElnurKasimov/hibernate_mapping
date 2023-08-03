@@ -34,6 +34,7 @@ public class ToDo {
     private Instant createdAt;
 
     @NotBlank (message = "title shouldn't be null, empty or blank")
+    @Column(nullable = false, unique = true)
     private String title;
 
     @NotNull (message = "owner shouldn't be null")
