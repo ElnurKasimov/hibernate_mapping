@@ -12,6 +12,7 @@ import java.sql.Timestamp;
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -31,6 +32,7 @@ public class ToDo {
     )
     private long id;
 
+    @NotNull
     private Instant createdAt;
 
     @NotBlank (message = "title shouldn't be null, empty or blank")
@@ -42,6 +44,7 @@ public class ToDo {
     @JoinColumn(name = "owner_id")
     private User owner;
 
+    @NotNull
     @ManyToMany
     @JoinTable (
             name = "todo_collaborator",
@@ -50,6 +53,67 @@ public class ToDo {
     )
     private Set<User> collaborators;
 
+    public long getId() {
+        return id;
+    }
 
+    public void setId(long id) {
+        this.id = id;
+    }
 
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
+    }
+
+    public Set<User> getCollaborators() {
+        return collaborators;
+    }
+
+    public void setCollaborators(Set<User> collaborators) {
+        this.collaborators = collaborators;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ToDo toDo = (ToDo) o;
+        return getId() == toDo.getId() && Objects.equals(getCreatedAt(), toDo.getCreatedAt()) && Objects.equals(getTitle(), toDo.getTitle()) && Objects.equals(getOwner(), toDo.getOwner()) && Objects.equals(getCollaborators(), toDo.getCollaborators());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getCreatedAt(), getTitle(), getOwner(), getCollaborators());
+    }
+
+    @Override
+    public String toString() {
+        return "ToDo{" +
+                "id=" + id +
+                ", createdAt=" + createdAt +
+                ", title='" + title + '\'' +
+                ", owner=" + owner +
+                ", collaborators=" + collaborators +
+                '}';
+    }
 }
