@@ -7,13 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for ToDoList" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar" />
+        </processorPath>
         <module name="todolist" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="todolist" options="-parameters" />
+      <module name="todolist" options="-parameters -sourcepath C:\Users\user\Downloads\Tmp\jom_spring_hibernate_1_22-m14_s11_team_2_04/src/main/java;C:\Users\user\Downloads\Tmp\jom_spring_hibernate_1_22-m14_s11_team_2_04/target/generated-sources/annotations;/" />
     </option>
   </component>
 </project>
