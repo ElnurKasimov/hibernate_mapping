@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.softserve.itacademy.repository.RoleRepositoryTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 2.23 s <<< FAILURE! - in com.softserve.itacademy.repository.RoleRepositoryTests
-createRole  Time elapsed: 0.099 s  <<< FAILURE!
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.623 s <<< FAILURE! - in com.softserve.itacademy.repository.RoleRepositoryTests
+createRole  Time elapsed: 0.048 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <10> but was: <102>
 	at com.softserve.itacademy.repository.RoleRepositoryTests.createRole(RoleRepositoryTests.java:29)
 
