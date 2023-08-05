@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.softserve.itacademy.model.UserTests" time="0.61" tests="28" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.softserve.itacademy.model.ToDoTest" time="0.029" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,32 +61,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="constraintViolationInvalidFirstName{String, String}[1]" classname="com.softserve.itacademy.model.UserTests" time="0.047"/>
-  <testcase name="constraintViolationInvalidFirstName{String, String}[2]" classname="com.softserve.itacademy.model.UserTests" time="0.02"/>
-  <testcase name="constraintViolationInvalidFirstName{String, String}[3]" classname="com.softserve.itacademy.model.UserTests" time="0.016"/>
-  <testcase name="constraintViolationInvalidFirstName{String, String}[4]" classname="com.softserve.itacademy.model.UserTests" time="0.035"/>
-  <testcase name="constraintViolationInvalidFirstName{String, String}[5]" classname="com.softserve.itacademy.model.UserTests" time="0.024"/>
-  <testcase name="constraintViolationInvalidFirstName{String, String}[6]" classname="com.softserve.itacademy.model.UserTests" time="0.016"/>
-  <testcase name="constraintViolationInvalidLastName{String, String}[1]" classname="com.softserve.itacademy.model.UserTests" time="0.015"/>
-  <testcase name="constraintViolationInvalidLastName{String, String}[2]" classname="com.softserve.itacademy.model.UserTests" time="0.02"/>
-  <testcase name="constraintViolationInvalidLastName{String, String}[3]" classname="com.softserve.itacademy.model.UserTests" time="0.025"/>
-  <testcase name="constraintViolationInvalidLastName{String, String}[4]" classname="com.softserve.itacademy.model.UserTests" time="0.014"/>
-  <testcase name="constraintViolationInvalidLastName{String, String}[5]" classname="com.softserve.itacademy.model.UserTests" time="0.015"/>
-  <testcase name="constraintViolationInvalidLastName{String, String}[6]" classname="com.softserve.itacademy.model.UserTests" time="0.015"/>
-  <testcase name="constraintViolationInvalid{String, String}[1]" classname="com.softserve.itacademy.model.UserTests" time="0.036"/>
-  <testcase name="constraintViolationInvalid{String, String}[2]" classname="com.softserve.itacademy.model.UserTests" time="0.02"/>
-  <testcase name="constraintViolationInvalid{String, String}[3]" classname="com.softserve.itacademy.model.UserTests" time="0.017"/>
-  <testcase name="constraintViolationInvalid{String, String}[4]" classname="com.softserve.itacademy.model.UserTests" time="0.019"/>
-  <testcase name="constraintViolationInvalid{String, String}[5]" classname="com.softserve.itacademy.model.UserTests" time="0.022"/>
-  <testcase name="testViolationOnBlankUserPassword" classname="com.softserve.itacademy.model.UserTests" time="0.021"/>
-  <testcase name="userWithValidEmail" classname="com.softserve.itacademy.model.UserTests" time="0.025"/>
-  <testcase name="constraintViolationInvalidUserPassword{String, String}[1]" classname="com.softserve.itacademy.model.UserTests" time="0.015"/>
-  <testcase name="constraintViolationInvalidUserPassword{String, String}[2]" classname="com.softserve.itacademy.model.UserTests" time="0.012"/>
-  <testcase name="constraintViolationInvalidUserPassword{String, String}[3]" classname="com.softserve.itacademy.model.UserTests" time="0.01"/>
-  <testcase name="constraintViolationInvalidUserPassword{String, String}[4]" classname="com.softserve.itacademy.model.UserTests" time="0.012"/>
-  <testcase name="constraintViolationInvalidUserPassword{String, String}[5]" classname="com.softserve.itacademy.model.UserTests" time="0.021"/>
-  <testcase name="testViolationOnNullUserRole" classname="com.softserve.itacademy.model.UserTests" time="0.011"/>
-  <testcase name="testViolationOnNullUserPassword" classname="com.softserve.itacademy.model.UserTests" time="0.01"/>
-  <testcase name="createValidUser" classname="com.softserve.itacademy.model.UserTests" time="0.011"/>
-  <testcase name="testViolationOnEmptyUserPassword" classname="com.softserve.itacademy.model.UserTests" time="0.011"/>
+  <testcase name="testViolationOnBlankToDoTitle" classname="com.softserve.itacademy.model.ToDoTest" time="0"/>
+  <testcase name="testViolationOnNullToDoCollaborators" classname="com.softserve.itacademy.model.ToDoTest" time="0"/>
+  <testcase name="testViolationOnNullToDoOwner" classname="com.softserve.itacademy.model.ToDoTest" time="0"/>
+  <testcase name="testViolationOnNullToDoTitle" classname="com.softserve.itacademy.model.ToDoTest" time="0.017"/>
+  <testcase name="testViolationOnEmptyToDoTitle" classname="com.softserve.itacademy.model.ToDoTest" time="0.008"/>
 </testsuite>

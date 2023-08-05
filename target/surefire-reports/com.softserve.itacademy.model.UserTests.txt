@@ -1,12 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.softserve.itacademy.model.UserTests
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.404 s <<< FAILURE! - in com.softserve.itacademy.model.UserTests
-constraintViolationInvalidFirstName{String, String}[1]  Time elapsed: 0.073 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
-	at com.softserve.itacademy.model.UserTests.constraintViolationInvalidFirstName(UserTests.java:105)
-
-constraintViolationInvalidFirstName{String, String}[3]  Time elapsed: 0.029 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
-	at com.softserve.itacademy.model.UserTests.constraintViolationInvalidFirstName(UserTests.java:105)
-
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.61 s - in com.softserve.itacademy.model.UserTests

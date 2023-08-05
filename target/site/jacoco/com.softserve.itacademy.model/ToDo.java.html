@@ -57,62 +57,63 @@ public class ToDo {
 <span class="fc" id="L57">    public ToDo() {</span>
 <span class="fc" id="L58">    }</span>
 
+    @Generated
     public long getId() {
-<span class="fc" id="L61">        return id;</span>
+        return id;
     }
-
+    @Generated
     public void setId(long id) {
-<span class="nc" id="L65">        this.id = id;</span>
-<span class="nc" id="L66">    }</span>
-
+        this.id = id;
+    }
+    @Generated
     public Instant getCreatedAt() {
-<span class="fc" id="L69">        return createdAt;</span>
+        return createdAt;
     }
-
+    @Generated
     public void setCreatedAt(Instant createdAt) {
-<span class="nc" id="L73">        this.createdAt = createdAt;</span>
-<span class="nc" id="L74">    }</span>
-
+        this.createdAt = createdAt;
+    }
+    @Generated
     public String getTitle() {
-<span class="nc" id="L77">        return title;</span>
+        return title;
     }
-
+    @Generated
     public void setTitle(String title) {
-<span class="fc" id="L81">        this.title = title;</span>
-<span class="fc" id="L82">    }</span>
-
+        this.title = title;
+    }
+    @Generated
     public User getOwner() {
-<span class="nc" id="L85">        return owner;</span>
+        return owner;
     }
-
+    @Generated
     public void setOwner(User owner) {
-<span class="fc" id="L89">        this.owner = owner;</span>
-<span class="fc" id="L90">    }</span>
-
-    public Set&lt;User&gt; getCollaborators() {
-<span class="nc" id="L93">        return collaborators;</span>
+        this.owner = owner;
     }
-
+    @Generated
+    public Set&lt;User&gt; getCollaborators() {
+        return collaborators;
+    }
+    @Generated
     public void setCollaborators(Set&lt;User&gt; collaborators) {
-<span class="nc" id="L97">        this.collaborators = collaborators;</span>
-<span class="nc" id="L98">    }</span>
-
+        this.collaborators = collaborators;
+    }
+    @Generated
     @Override
     public boolean equals(Object o) {
-<span class="nc bnc" id="L102" title="All 2 branches missed.">        if (this == o) return true;</span>
-<span class="nc bnc" id="L103" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
-<span class="nc" id="L104">        ToDo toDo = (ToDo) o;</span>
-<span class="nc bnc" id="L105" title="All 10 branches missed.">        return getId() == toDo.getId() &amp;&amp; Objects.equals(getCreatedAt(), toDo.getCreatedAt()) &amp;&amp; Objects.equals(getTitle(), toDo.getTitle()) &amp;&amp; Objects.equals(getOwner(), toDo.getOwner()) &amp;&amp; Objects.equals(getCollaborators(), toDo.getCollaborators());</span>
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ToDo toDo = (ToDo) o;
+        return getId() == toDo.getId() &amp;&amp; Objects.equals(getCreatedAt(), toDo.getCreatedAt()) &amp;&amp; Objects.equals(getTitle(), toDo.getTitle()) &amp;&amp; Objects.equals(getOwner(), toDo.getOwner()) &amp;&amp; Objects.equals(getCollaborators(), toDo.getCollaborators());
     }
-
+    @Generated
     @Override
     public int hashCode() {
-<span class="nc" id="L110">        return Objects.hash(getId(), getCreatedAt(), getTitle(), getOwner(), getCollaborators());</span>
+        return Objects.hash(getId(), getCreatedAt(), getTitle(), getOwner(), getCollaborators());
     }
-
+    @Generated
     @Override
     public String toString() {
-<span class="nc" id="L115">        return &quot;ToDo{&quot; +</span>
+        return &quot;ToDo{&quot; +
                 &quot;id=&quot; + id +
                 &quot;, createdAt=&quot; + createdAt +
                 &quot;, title='&quot; + title + '\'' +

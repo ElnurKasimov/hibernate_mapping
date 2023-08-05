@@ -30,13 +30,13 @@ public class User  {
     private String email;
 
     @NotBlank
-    @Size(min = 2, max = 255, message = &quot;firstName has to be from 2 to 255 symbols&quot;)
-    @Pattern(regexp = &quot;^[A-Za-z]+(?:-[A-Za-z]+)*$&quot;)
+    @Size(min = 2, max = 255, message = &quot;firstName has to be from 2 to 255 symbols and can contain hyphen but not first, not last&quot;)
+    @Pattern(regexp = &quot;^(?!-)[A-Z][a-zA-Z0-9]{1,251}(?:-[A-Z][a-zA-Z0-9]{2,})?(?&lt;!-)$&quot;)
     private String firstName;
 
     @NotBlank
-    @Size(min = 2, max = 255, message = &quot;lastName has to be from 2 to 255 symbols&quot;)
-    @Pattern(regexp = &quot;^[A-Za-z]+(?:-[A-Za-z]+)*$&quot;)
+    @Size(min = 2, max = 255, message = &quot;firstName has to be from 2 to 255 symbols and can contain hyphen but not first, not last&quot;)
+    @Pattern(regexp = &quot;^(?!-)[A-Z][a-zA-Z0-9]{1,251}(?:-[A-Z][a-zA-Z0-9]{2,})?(?&lt;!-)$&quot;)
     private String lastName;
 
     @NotNull
@@ -58,87 +58,88 @@ public class User  {
 
 <span class="fc" id="L59">    public User() {</span>
 <span class="fc" id="L60">    }</span>
-
+    @Generated
     public long getId() {
-<span class="fc" id="L63">        return id;</span>
+        return id;
     }
-
+    @Generated
     public void setId(long id) {
-<span class="nc" id="L67">        this.id = id;</span>
-<span class="nc" id="L68">    }</span>
-
+        this.id = id;
+    }
+    @Generated
     public String getEmail() {
-<span class="fc" id="L71">        return email;</span>
+        return email;
     }
-
+    @Generated
     public void setEmail(String email) {
-<span class="fc" id="L75">        this.email = email;</span>
-<span class="fc" id="L76">    }</span>
-
+        this.email = email;
+    }
+    @Generated
     public String getFirstName() {
-<span class="nc" id="L79">        return firstName;</span>
+        return firstName;
     }
-
+    @Generated
     public void setFirstName(String firstName) {
-<span class="fc" id="L83">        this.firstName = firstName;</span>
-<span class="fc" id="L84">    }</span>
-
+        this.firstName = firstName;
+    }
+    @Generated
     public String getLastName() {
-<span class="nc" id="L87">        return lastName;</span>
+        return lastName;
     }
-
+    @Generated
     public void setLastName(String lastName) {
-<span class="fc" id="L91">        this.lastName = lastName;</span>
-<span class="fc" id="L92">    }</span>
-
+        this.lastName = lastName;
+    }
+    @Generated
     public Role getRole() {
-<span class="nc" id="L95">        return role;</span>
+        return role;
     }
-
+    @Generated
     public void setRole(Role role) {
-<span class="fc" id="L99">        this.role = role;</span>
-<span class="fc" id="L100">    }</span>
-
+        this.role = role;
+    }
+    @Generated
     public String getPassword() {
-<span class="nc" id="L103">        return password;</span>
+        return password;
     }
-
+    @Generated
     public void setPassword(String password) {
-<span class="fc" id="L107">        this.password = password;</span>
-<span class="fc" id="L108">    }</span>
-
+        this.password = password;
+    }
+    @Generated
     public Set&lt;ToDo&gt; getOwnerOf() {
-<span class="nc" id="L111">        return ownerOf;</span>
+        return ownerOf;
     }
-
+    @Generated
     public void setOwnerOf(Set&lt;ToDo&gt; ownerOf) {
-<span class="nc" id="L115">        this.ownerOf = ownerOf;</span>
-<span class="nc" id="L116">    }</span>
-
+        this.ownerOf = ownerOf;
+    }
+    @Generated
     public Set&lt;ToDo&gt; getCommonToDos() {
-<span class="nc" id="L119">        return commonToDos;</span>
+        return commonToDos;
+    }
+    @Generated
+    public void setCommonToDos(Set&lt;ToDo&gt; commonToDos) {
+        this.commonToDos = commonToDos;
     }
 
-    public void setCommonToDos(Set&lt;ToDo&gt; commonToDos) {
-<span class="nc" id="L123">        this.commonToDos = commonToDos;</span>
-<span class="nc" id="L124">    }</span>
-
+    @Generated
     @Override
     public boolean equals(Object o) {
-<span class="nc bnc" id="L128" title="All 2 branches missed.">        if (this == o) return true;</span>
-<span class="nc bnc" id="L129" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
-<span class="nc" id="L130">        User user = (User) o;</span>
-<span class="nc bnc" id="L131" title="All 16 branches missed.">        return getId() == user.getId() &amp;&amp; Objects.equals(getEmail(), user.getEmail()) &amp;&amp; Objects.equals(getFirstName(), user.getFirstName()) &amp;&amp; Objects.equals(getLastName(), user.getLastName()) &amp;&amp; Objects.equals(getRole(), user.getRole()) &amp;&amp; Objects.equals(getPassword(), user.getPassword()) &amp;&amp; Objects.equals(getOwnerOf(), user.getOwnerOf()) &amp;&amp; Objects.equals(getCommonToDos(), user.getCommonToDos());</span>
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return getId() == user.getId() &amp;&amp; Objects.equals(getEmail(), user.getEmail()) &amp;&amp; Objects.equals(getFirstName(), user.getFirstName()) &amp;&amp; Objects.equals(getLastName(), user.getLastName()) &amp;&amp; Objects.equals(getRole(), user.getRole()) &amp;&amp; Objects.equals(getPassword(), user.getPassword()) &amp;&amp; Objects.equals(getOwnerOf(), user.getOwnerOf()) &amp;&amp; Objects.equals(getCommonToDos(), user.getCommonToDos());
     }
-
+    @Generated
     @Override
     public int hashCode() {
-<span class="nc" id="L136">        return Objects.hash(getId(), getEmail(), getFirstName(), getLastName(), getRole(), getPassword(), getOwnerOf(), getCommonToDos());</span>
+        return Objects.hash(getId(), getEmail(), getFirstName(), getLastName(), getRole(), getPassword(), getOwnerOf(), getCommonToDos());
     }
-
+    @Generated
     @Override
     public String toString() {
-<span class="nc" id="L141">        return &quot;User{&quot; +</span>
+        return &quot;User{&quot; +
                 &quot;id=&quot; + id +
                 &quot;, email='&quot; + email + '\'' +
                 &quot;, firstName='&quot; + firstName + '\'' +

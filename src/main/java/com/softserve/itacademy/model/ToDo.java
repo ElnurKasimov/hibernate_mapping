@@ -57,46 +57,47 @@ public class ToDo {
     public ToDo() {
     }
 
+    @Generated
     public long getId() {
         return id;
     }
-
+    @Generated
     public void setId(long id) {
         this.id = id;
     }
-
+    @Generated
     public Instant getCreatedAt() {
         return createdAt;
     }
-
+    @Generated
     public void setCreatedAt(Instant createdAt) {
         this.createdAt = createdAt;
     }
-
+    @Generated
     public String getTitle() {
         return title;
     }
-
+    @Generated
     public void setTitle(String title) {
         this.title = title;
     }
-
+    @Generated
     public User getOwner() {
         return owner;
     }
-
+    @Generated
     public void setOwner(User owner) {
         this.owner = owner;
     }
-
+    @Generated
     public Set<User> getCollaborators() {
         return collaborators;
     }
-
+    @Generated
     public void setCollaborators(Set<User> collaborators) {
         this.collaborators = collaborators;
     }
-
+    @Generated
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -104,12 +105,12 @@ public class ToDo {
         ToDo toDo = (ToDo) o;
         return getId() == toDo.getId() && Objects.equals(getCreatedAt(), toDo.getCreatedAt()) && Objects.equals(getTitle(), toDo.getTitle()) && Objects.equals(getOwner(), toDo.getOwner()) && Objects.equals(getCollaborators(), toDo.getCollaborators());
     }
-
+    @Generated
     @Override
     public int hashCode() {
         return Objects.hash(getId(), getCreatedAt(), getTitle(), getOwner(), getCollaborators());
     }
-
+    @Generated
     @Override
     public String toString() {
         return "ToDo{" +
